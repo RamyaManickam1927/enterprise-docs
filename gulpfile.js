@@ -47,7 +47,7 @@ gulp.task('ship-to-gitlap', function (done) {
             return;
         } else {
             console.log('Clone has been completed...!');
-            shelljs.cp('-rf', `./${cloneRepos[j]}`, `./gitlabRepo/docs`);
+            shelljs.cp('-rf', `./docs/${cloneRepos[j]}`, `./gitlabRepo/docs`);
             shelljs.cd(`./gitlabRepo`);
             shelljs.exec('git add .');
             shelljs.exec('git pull');
